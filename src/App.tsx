@@ -4,12 +4,13 @@ import Sidebar from '@/components/Sidebar.tsx'
 import Finance from '@/pages/Finance.tsx'
 import Stocks from '@/pages/Stocks.tsx'
 import Crypto from '@/pages/Crypto.tsx'
+import Profile from "./pages/Profile";
 
 const App: FC = () => {
   return (
         <BrowserRouter>
           <div className="flex w-screen">
-            <aside className="h-screen w-12 border-r">
+            <aside className="h-screen w-14 border-r">
               <Sidebar/>
             </aside>
             <main className="w-full">
@@ -17,6 +18,7 @@ const App: FC = () => {
                   <Route path="finance" element={<Finance/>} />
                   <Route path="stocks" element={<Stocks/>} />
                   <Route path="crypto" element={<Crypto/>} />
+                  <Route path="profile" element={<Profile/>} />
                   <Route path="*" element={<Navigate to="/finance" />} />
               </Routes>
             </main>
